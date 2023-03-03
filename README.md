@@ -11,6 +11,10 @@ You can use both of them as a template for the task 4. When measuring times with
 
 You can use the latter printing functionality to print out floating point values in fp_arithmetic.s and integer values in int_arithmetic.s. You can use them to make sure that your calculations work properly but comment the printing functionalities out when measuring execution times as they can be intermittent and give unaccurate measurements.
 
+You may find the following links useful
+x86 instructions: https://www.felixcloutier.com/x86/
+System V ABI documentation: https://gitlab.com/x86-psABIs/x86-64-ABI
+
 
 ## Run the programs
 
