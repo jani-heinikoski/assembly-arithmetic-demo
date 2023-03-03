@@ -83,7 +83,5 @@ N:
 	.quad 69
 x:
 	.quad 2
-y:
-	.quad 13
 i:
-	.quad 10
+	.quad 100

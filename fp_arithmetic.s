@@ -74,8 +74,8 @@ message:
 N:
 	.double 69.0
 x:
-	.double 4.20
+	.double 420.420
 p:
-	.double 13.37
+	.double 0.90
 i:
 	.quad 10
