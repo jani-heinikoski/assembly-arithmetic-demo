@@ -35,15 +35,18 @@ loop:
 	# Call the printf function
 	call 	printf
 
-    # IMPLEMENT THE CALCULATIONS HERE, YOU CAN USE PRINTING TO CHECK IF IT IS DONE CORRECTLY
+    # IMPLEMENT THE CALCULATIONS HERE, YOU CAN USE THE PRINTING TO CHECK IF IT IS DONE CORRECTLY
 
     # Signed integer division
     # idivq divides %rdx:%rax with r64/m64. Quotient --> rax, remainder --> rdx
     # Zero out the register rdx so that signed division works properly
 	xor     %rdx, %rdx
-	movq    xint64, %rax
-	idivq	yint64
+	movq    N, %rax
+	idivq	x
+    # Save the quotient to x
+    movq    %rax, x
     
+
 	# ----- print the value of x ----- 
 	# First argument is given to rdi which is the printf's format
 	movq	$printf_int_format, %rdi
@@ -69,18 +72,18 @@ loop:
 .data
 
 printf_int_format:
-	.string "%df\n"
+	.string "%d\n"
 printf_string_format:
 	.string "%s"
 
 message:
 	.string "x: "
 
-nint64:
+N:
 	.quad 69
-xint64:
-	.quad 4
-yint64:
+x:
+	.quad 2
+y:
 	.quad 13
 i:
 	.quad 10
